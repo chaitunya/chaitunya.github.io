@@ -42,14 +42,17 @@
 <ul>
   <li><a href="https://github.com/chaitunya">GitHub</a></li>
   <li><a href="https://www.linkedin.com/in/chaitanya-nookala">LinkedIn</a></li>
-  <li id="email"></li>
+  <li id="email"><a href="#">Email</a></li>
 </ul>
 
 <footer>San Francisco, CA</footer>
 
 <script>
-  document.getElementById("email").textContent =
-    ["chaitanya", "nookala"].join(" [dot] ") + " [at] " + ["gmail", "com"].join(" [dot] ");
+  document.querySelector("#email a").onclick = function (e) {
+    e.preventDefault();
+    document.getElementById("email").textContent =
+      ["chaitanya", "nookala"].join(" [dot] ") + " [at] " + ["gmail", "com"].join(" [dot] ");
+  };
 </script>
 
 </body>
